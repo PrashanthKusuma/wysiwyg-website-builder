@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(236, 236, 236);
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.websitebody {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #000;
+  color: white;
+  padding: 0 5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.left-panel,
+.right-panel,
+.canvas-body {
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 15px;
+  height: calc(100% - 30px);
+  overflow: hidden;
+  word-wrap: none;
+  word-break: break-all;
+}
+
+.canvas-body {
+  height: calc(100vh - 85px);
+  margin: 15px 0;
+}
+
+.left-panel,
+.right-panel {
+  width: 22%;
+}
+
+.canvas-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56%;
+}
+.previewBtn {
+  margin-right: 220px;
+  width: 100px;
+  height: 30px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+}
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.BtnBox {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: black;
+  /* cursor: pointer; */
+  margin: 15px 0;
+}
+
+.controlPanel {
+  padding: 10px;
+}
+.imageBox {
+  margin: 10px 0;
+}
+.imageBox:hover {
+  /* border: 2px dashed rgb(0, 166, 255); */
+  filter: drop-shadow(0 0 0.35rem crimson);
+}
+.imageBox:active {
+  /* border: 2px dashed rgb(0, 166, 255); */
+  filter: drop-shadow(0 0 0.25rem rgb(0, 0, 0));
+}
+.hover:hover {
+  /* border: 2px dashed rgb(0, 166, 255); */
+  filter: drop-shadow(0 0 0.35rem crimson);
+}
+
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+.file-input {
+  width: 87%;
+}
+.file-input label {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(172, 172, 172);
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+  border: 2px dashed rgb(212, 212, 212);
+  margin: 10px 0;
+  background-color: #ffffffb0;
+}
+.file-input label:hover {
+  color: rgb(150, 150, 150);
+  border: 2px dashed rgb(150, 150, 150);
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+}
+
+.range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  background: #eaeaea;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.range-input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.loader-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  height: 100px;
+  width: 100px;
+  border-width: 10px;
+  border-color: black;
+  border-top-color: rgb(236, 236, 236);
+  border-style: solid;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fields-container{
+  width:100%;
+    /* border:1px solid red; */
+}
+.fields{
+  width:100%;
+  height:30px;
+    /* border:1px solid black; */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.fields > input{
+  width:150px;
+  height:30px;
+  padding:5px;
+}
+.fields > input[type='color']{
+  padding:0px;
+}
+.fields > input[type='range']{
+  height:4px
+}
+.fields > input[type='checkbox']{
+  left:0;
+  height:20px;
+}

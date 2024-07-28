@@ -1,0 +1,46 @@
+.app {
+  display: flex;
+}
+
+.toolbar {
+  width: 100%;
+  padding: 10px;
+}
+
+.canvas {
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.text-box,
+.image-box,
+.button-box {
+  margin-bottom: 10px;
+}
+
+.button-box input {
+  display: block;
+  width: 100%;
+}
+.draggableBtn {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  margin: 3px 0;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  background-color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+.draggableBtn:hover{
+  background-color: rgb(230, 230, 230);
+}
+.t2{
+  margin-bottom:10px;
+  font-size: 17px;
+  text-align: center;
+  display: block;
+}

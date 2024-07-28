@@ -1,4 +1,7 @@
 # WYSIWYG Website Builder
+```sh
+live URL : https://wysiwyg-website-builder.vercel.app
+```
 This project is a WYSIWYG (What You See Is What You Get) website builder built using React. It features custom components with drag-and-drop functionality, utilizing the Jodit editor for rich text editing.
 
 ## Features
